@@ -67,3 +67,15 @@ def isprime(number):
             return False
 
     return True
+
+def sum_of_n(n):
+    '''Return sum of the first n natural numbers.'''
+    return n * (n + 1) // 2
+
+def sum_of_n2(n):
+    '''Return sum of the squares of the first n natural numbers.'''
+    return n * (n + 1) * ((2 * n) + 1) // 6
+
+def sum_of_n3(n):
+    '''Return sum of the cubes of the first n natural numbers.'''
+    return (n ** 2) * ((n + 1) ** 2) // 4
