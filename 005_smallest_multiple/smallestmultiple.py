@@ -12,7 +12,7 @@ top_number = int(input('What\'s your top number? '))
 # Build list including all factors of all numbers in series
 factors = []
 for i in range(2, top_number + 1):
-    i_factors = pentimath.all_factors(i)
+    i_factors = pentimath.factors_all(i)
     for factor in i_factors:
         if factor not in factors:
             factors.append(factor)

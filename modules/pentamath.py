@@ -2,20 +2,29 @@
 Tricky math functions.
 '''
 
-def isprime(number):
-    '''Test a number for primeness.'''
+def factors_all(number):
+    '''Factor any positive integer.
+
+    Returns a list of all prime factors, including duplicates.'''
 
     factors = []
+    reduced = number
 
-    for i in range(int(number ** 0.5) + 1):
-        if i < 4:
-            continue
-        if number % i == 0:
-            return False
+    while True:
+        for i in range(2, number):
+            if number % i == 0:
+                factors.append(i)
+                reduced = int(number / i)
+                break
+        if number == reduced:
+            break
+        else:
+            number = reduced
 
-    return True
+    factors.append(number)
+    return factors
 
-def unique_factors(number):
+def factors_unique(number):
     '''Factor any positive integer.
 
     Returns a list of unique prime factors.'''
@@ -39,31 +48,22 @@ def unique_factors(number):
         factors.append(number)
     return factors
 
-def all_factors(number):
-    '''Factor any positive integer.
-
-    Returns a list of all prime factors, including duplicates.'''
-
-    factors = []
-    reduced = number
-
-    while True:
-        for i in range(2, number):
-            if number % i == 0:
-                factors.append(i)
-                reduced = int(number / i)
-                break
-        if number == reduced:
-            break
-        else:
-            number = reduced
-
-    factors.append(number)
-    return factors
-
 def ispalindrome(input):
     '''Evaluate whether or not an input is palindromic.'''
     if str(input)[:] == str(input)[::-1]:
         return True
     else:
         return False
+
+def isprime(number):
+    '''Test a number for primeness.'''
+
+    factors = []
+
+    for i in range(int(number ** 0.5) + 1):
+        if i < 4:
+            continue
+        if number % i == 0:
+            return False
+
+    return True
