@@ -5,6 +5,9 @@ By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that 
 What is the 10 001st prime number?'''
 
 import pentamath
+import time
+
+start_time = time.process_time()
 
 target = 10001
 primelist = [2]
@@ -17,3 +20,7 @@ while len(primelist) < target:
     i += 1
 
 print('The {}st prime number is {}.'.format(len(primelist), primelist[len(primelist) - 1]))
+
+end_time = time.process_time()
+
+print('CPU time: {} seconds'.format(end_time - start_time))
