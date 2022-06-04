@@ -11,8 +11,9 @@ primelist = [2]
 i = 3
 
 while len(primelist) < target:
-    if i % 2 > 0 and pentamath.isprime(i):
-        primelist.append(i)
+    if i % 2 > 0:
+        if pentamath.isprime(i):
+            primelist.append(i)
     i += 1
 
 print('The {}st prime number is {}.'.format(len(primelist), primelist[len(primelist) - 1]))
