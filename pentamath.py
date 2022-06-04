@@ -17,11 +17,11 @@ def factors_all(number):
                 reduced = int(number / i)
                 break
         if number == reduced:
+            factors.append(number)
             break
         else:
             number = reduced
 
-    factors.append(number)
     return factors
 
 def factors_unique(number):
@@ -60,10 +60,18 @@ def isprime(number):
 
     # Compute all unique factors
     factors = []
+    reduced = 0
 
-    for i in range(2, int(number + 1)):
-        if number % i == 0:
-            factors.append(i)
+    while True:
+        for i in range(2, number):
+            if number % i == 0:
+                factors.append(i)
+                reduced = int(number / i)
+                break
+        if number == reduced:
+            break
+        else:
+            number = reduced
 
     if len(factors) == 1:
         return True
