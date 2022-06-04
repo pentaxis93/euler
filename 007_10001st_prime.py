@@ -10,7 +10,7 @@ target = 10001
 primelist = [2]
 i = 2
 
-while len(primelist) <= target - 1:
+while len(primelist) < target:
     i += 1
     if i % 2 > 0:
         if len(pentamath.factors_all(i)) > 1:
@@ -18,4 +18,4 @@ while len(primelist) <= target - 1:
         else:
             primelist.append(i)
 
-print('The {len(primelist)}st prime number is {primelist[len(primelist) - 1]}.')
+print('The {}st prime number is {}.'.format(len(primelist), primelist[len(primelist) - 1]))
