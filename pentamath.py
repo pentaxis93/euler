@@ -58,25 +58,11 @@ def ispalindrome(input):
 def isprime(number):
     '''Test a number for primeness.'''
 
-    # Compute all unique factors
-    factors = []
-    reduced = 0
+    for i in range(2, number):
+        if number % i == 0:
+            return False
 
-    while True:
-        for i in range(2, number):
-            if number % i == 0:
-                factors.append(i)
-                reduced = int(number / i)
-                break
-        if number == reduced:
-            break
-        else:
-            number = reduced
-
-    if len(factors) == 1:
-        return True
-    else:
-        return False
+    return True
 
 def sum_of_n(n):
     '''Return sum of the first n natural numbers.'''

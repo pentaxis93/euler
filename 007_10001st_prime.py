@@ -8,14 +8,11 @@ import pentamath
 
 target = 10001
 primelist = [2]
-i = 2
+i = 3
 
 while len(primelist) < target:
+    if i % 2 > 0 and pentamath.isprime(i):
+        primelist.append(i)
     i += 1
-    if i % 2 > 0:
-        if len(pentamath.factors_all(i)) > 1:
-            continue
-        else:
-            primelist.append(i)
 
 print('The {}st prime number is {}.'.format(len(primelist), primelist[len(primelist) - 1]))
