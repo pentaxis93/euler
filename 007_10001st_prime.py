@@ -6,7 +6,7 @@ What is the 10 001st prime number?'''
 
 import pentamath
 
-target = int(input('\nHow many primes would you like me to find? '))
+target = 10001
 primelist = []
 i = 1
 
@@ -17,4 +17,5 @@ while len(primelist) <= target - 1:
             continue
         else:
             primelist.append(i)
-            print(f'Prime #{len(primelist)}: {primelist[len(primelist) - 1]}')
+
+print('The {len(primelist)}st prime number is {primelist[len(primelist) - 1]}.')
