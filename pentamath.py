@@ -58,6 +58,9 @@ def ispalindrome(input):
 def isprime(number):
     '''Test a number for primeness.'''
 
+    if number == 2:
+        return True
+
     for i in range(2, int(number ** 0.5) + 1):
         if number % i == 0:
             return False
