@@ -12,8 +12,9 @@ i = 1
 
 while len(primelist) <= target - 1:
     i += 1
-    if len(pentamath.factors_all(i)) > 1:
-        continue
-    else:
-        primelist.append(i)
-        print(f'Prime #{len(primelist)}: {primelist[len(primelist) - 1]}')
+    if i == 2 or i % 2 > 0:
+        if len(pentamath.factors_all(i)) > 1:
+            continue
+        else:
+            primelist.append(i)
+            print(f'Prime #{len(primelist)}: {primelist[len(primelist) - 1]}')
