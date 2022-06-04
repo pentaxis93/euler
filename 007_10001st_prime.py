@@ -7,12 +7,12 @@ What is the 10 001st prime number?'''
 import pentamath
 
 target = 10001
-primelist = []
-i = 1
+primelist = [2]
+i = 2
 
 while len(primelist) <= target - 1:
     i += 1
-    if i == 2 or i % 2 > 0:
+    if i % 2 > 0:
         if len(pentamath.factors_all(i)) > 1:
             continue
         else:
