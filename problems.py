@@ -4,13 +4,13 @@ import pentamath
 
 os.system('clear')
 
-def multipladd(x = 3, y = 5, z = 1000)
+def multipladd(x = 3, y = 5, z = 1000):
     '''Selectively sum a sequence based on a pair of multipliers
     Calculate the sum of two arithmetic sequences up to an arbitrary limit of highness
 
 
     If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. We'll call this "multipladdition."
-    ''')
+    '''
 
     x = int(input('Choose the first multiplier: '))
     y = int(input('Choose the second one: '))
