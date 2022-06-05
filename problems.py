@@ -1,8 +1,4 @@
-import os
-import time
 import trickymath
-
-os.system('clear')
 
 # Problem 1: Sum of Multiples
 def multipladd(x = 3, y = 5, z = 1000):
