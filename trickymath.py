@@ -69,6 +69,14 @@ def isprime(number):
 
     return True
 
+def sum_of_multiples(n, limit):
+    '''Calculate the sum of multiples of a number below a limit.
+
+    Uses the formula for the sum of an arithmetic progression.'''
+
+    top = (limit - 1) // n
+    return n * (top * (top + 1) // 2)
+
 def sum_of_n(n):
     '''Return sum of the first n natural numbers.'''
     return n * (n + 1) // 2

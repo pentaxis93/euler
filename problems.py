@@ -12,14 +12,6 @@ def multipladd(x = 3, y = 5, z = 1000):
     y = int(input('Choose the second one: '))
     z = int(input('Set the upper limit: '))
 
-    def sum_of_multiples(n, limit):
-        '''Calculate the sum of multiples of a number below a limit.
-
-        Uses the formula for the sum of an arithmetic progression.'''
-
-        top = (limit - 1) // n
-        return n * (top * (top + 1) // 2)
-
     start_clock_time = time.time()
     start_cpu_time = time.process_time()
 
