@@ -1,6 +1,6 @@
 import os
 import time
-import pentamath
+import trickymath
 
 os.system('clear')
 
