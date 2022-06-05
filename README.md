@@ -1,3 +1,3 @@
 # Euler
 
-My (beginner) approach to Project Euler.
+My approach to Project Euler.
