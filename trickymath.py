@@ -1,90 +1,76 @@
-'''
-Tricky math functions.
-'''
+"""This module provides a variety of tricky math functions which may be
+useful for exploring Project Euler problems."""
 
-def factors_all(number):
-    '''Factor any positive integer.
-
-    Returns a list of all prime factors, including duplicates.'''
-
+def factors_all(x):
+    """Return a list of all the prime factors of x, including
+    duplicates.
+    """
     factors = []
-    reduced = number
-
+    reduced = x
     while True:
-        for i in range(2, number):
-            if number % i == 0:
+        for i in range(2, x):
+            if x % i == 0:
                 factors.append(i)
-                reduced = int(number / i)
+                reduced = int(x / i)
                 break
-        if number == reduced:
-            factors.append(number)
+        if x == reduced:
+            factors.append(x)
             break
         else:
-            number = reduced
-
+            x = reduced
     return factors
 
-def factors_unique(number):
-    '''Factor any positive integer.
-
-    Returns a list of unique prime factors.'''
-
+def factors_unique(x):
+    """Return a list of all the unique prime factors of x."""
     factors = []
-    reduced = number
-
+    reduced = x
     while True:
-        for i in range(2, number):
-            if number % i == 0:
+        for i in range(2, x):
+            if x % i == 0:
                 if i not in factors:
                     factors.append(i)
-                reduced = int(number / i)
+                reduced = int(x / i)
                 break
-        if number == reduced:
+        if x == reduced:
             break
         else:
-            number = reduced
-
-    if number not in factors:
-        factors.append(number)
+            x = reduced
+    if x not in factors:
+        factors.append(x)
     return factors
 
 def ispalindrome(input):
-    '''Evaluate whether or not an input is palindromic.'''
+    """Return True if input is palindromic, and False otherwise."""
     if str(input)[:] == str(input)[::-1]:
         return True
     else:
         return False
 
-def isprime(number):
-    '''Test a number for primeness.'''
-
-    if number == 1:
+def isprime(x):
+    """Return True if x is prime, and False otherwise."""
+    if x == 1:
         return False
-    elif number == 2:
+    elif x == 2:
         return True
     else:
-        for i in range(2, int(number ** 0.5) + 1):
-            if number % i == 0:
+        for i in range(2, int(x ** 0.5) + 1):
+            if x % i == 0:
                 return False
-
     return True
 
 def sum_of_multiples(n, limit):
-    '''Calculate the sum of multiples of a number below a limit.
-
-    Uses the formula for the sum of an arithmetic progression.'''
-
+    """Return the sum of the multiples of x below the limit."""
     top = (limit - 1) // n
     return n * (top * (top + 1) // 2)
 
 def sum_of_n(n):
-    '''Return sum of the first n natural numbers.'''
+    """Return the sum of the first n natural numbers."""
     return n * (n + 1) // 2
 
 def sum_of_n2(n):
-    '''Return sum of the squares of the first n natural numbers.'''
+    """Return the sum of the squares of the first n natural numbers."""
     return n * (n + 1) * ((2 * n) + 1) // 6
 
 def sum_of_n3(n):
-    '''Return sum of the cubes of the first n natural numbers.'''
+    """Return the sum of the cubes of the first n natural numbers."""
     return (n ** 2) * ((n + 1) ** 2) // 4
