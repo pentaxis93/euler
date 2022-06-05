@@ -1,3 +1,3 @@
-# Penta-Euler
+# Euler
 
-Fun with Project Euler math problems.
+My (beginner) approach to Project Euler.
