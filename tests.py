@@ -10,3 +10,6 @@ class TestProblemSolvers(unittest.TestCase):
 
     def test_sumsquarediff(self):
         self.assertEqual(sumsquarediff(100), 25164150)
+
+    def test_smallmult(self):
+        self.assertEqual(smallmult(20), 232792560)
