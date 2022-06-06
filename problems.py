@@ -1,5 +1,7 @@
 """This module provides functional implementations of a few Project
 Euler problems.
+
+The problems are listed in order of difficulty, not by problem number.
 """
 
 import trickymath
@@ -9,8 +11,7 @@ def multipladd(x = 3, y = 5, z = 1000):
     """Return the sum of all natural numbers below z that are multiples
     of x or y.
     """
-    som = trickymath.sum_of_multiples()
-    return som(x, z) + som(y, z) - som(x * y, z)
+    return trickymath.sum_of_multiples(x, z) + trickymath.sum_of_multiples(y, z) - trickymath.sum_of_multiples(x * y, z)
 
 # Problem 2: Even Fibonacci numbers
 def evenfibs(x = 4000000):
@@ -26,22 +27,9 @@ def evenfibs(x = 4000000):
         c = a + b
     return total
 
-# Problem 3: Sum Square Difference
-def sumsquarediff(x):
-    '''Perform a single step in factoring a number.
-
-    Finds the smallest factor of the number, divides the number by the factor, and returns the reduced number for further factoring.'''
-    for i in range(2, number):
-        if number % i == 0:
-            print(i, 'is a factor.')
-            number = int(number / i)
-            return number
-    return number
-
-while True:
-    reduced = factor(target)
-    if target == reduced:
-        break
-    target = reduced
-
-print('The largest factor is', target)
+# Problem 6: Sum Square Difference
+def sumsquarediff(n = 100):
+    square_of_sum = trickymath.sum_of_n(n) ** 2
+    sum_of_squares = trickymath.sum_of_n2(n)
+    diff = square_of_sum - sum_of_squares
+    return diff
