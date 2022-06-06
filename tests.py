@@ -13,3 +13,6 @@ class TestProblemSolvers(unittest.TestCase):
 
     def test_smallmult(self):
         self.assertEqual(smallmult(20), 232792560)
+
+    def test_largestpfactor(self):
+        self.assertEqual(largestpfactor(600851475143), 6857)
