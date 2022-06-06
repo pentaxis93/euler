@@ -49,3 +49,9 @@ def smallmult(x = 20):
     for factor in factors:
         smallest_multiple *= factor
     return smallest_multiple
+
+# Problem 3: Largest Prime Factor
+def largestpfactor(x):
+    factors = trickymath.factor_unique(x)
+    factors.sort()
+    return factors[-1]
