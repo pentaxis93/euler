@@ -75,3 +75,14 @@ def largestpalinprod():
                 if candidate > largest_palindrome:
                     largest_palindrome = candidate
     return largest_palindrome
+
+# Problem 7: 10001st Prime
+def nthprime(n = 10001):
+    primelist = [2]
+    i = 3
+    while len(primelist) < n:
+        if i % 2 > 0:
+            if trickymath.isprime(i):
+                primelist.append(i)
+        i += 1
+    return primelist[-1]

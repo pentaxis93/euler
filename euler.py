@@ -52,3 +52,29 @@ print('The solution to Problem 3 is {}.'.format(format(solution, ',')))
 print('''This calculation required {} seconds of clock time
 and {} seconds of cpu time.
 '''.format(clock_time, cpu_time))
+
+# Problem 4
+start_clock_time = time.time()
+start_cpu_time = time.process_time()
+solution = problems.largestpalinprod()
+end_clock_time = time.time()
+end_cpu_time = time.process_time()
+clock_time = end_clock_time - start_clock_time
+cpu_time = end_cpu_time - start_cpu_time
+print('The solution to Problem 4 is {}.'.format(format(solution, ',')))
+print('''This calculation required {} seconds of clock time
+and {} seconds of cpu time.
+'''.format(clock_time, cpu_time))
+
+# Problem 7
+start_clock_time = time.time()
+start_cpu_time = time.process_time()
+solution = problems.nthprime()
+end_clock_time = time.time()
+end_cpu_time = time.process_time()
+clock_time = end_clock_time - start_clock_time
+cpu_time = end_cpu_time - start_cpu_time
+print('The solution to Problem 7 is {}.'.format(format(solution, ',')))
+print('''This calculation required {} seconds of clock time
+and {} seconds of cpu time.
+'''.format(clock_time, cpu_time))

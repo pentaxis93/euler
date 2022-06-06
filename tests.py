@@ -19,3 +19,6 @@ class TestProblemSolvers(unittest.TestCase):
 
     def test_largestpalinprod(self):
         self.assertEqual(largestpalinprod(), 906609)
+
+    def test_nthprime(self):
+        self.assertEqual(nthprime(10001), 104743)
