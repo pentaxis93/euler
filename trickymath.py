@@ -39,7 +39,8 @@ def factor_unique(x):
         factors.append(x)
     return factors
 
-def smallest_factor(x): """Return the smallest factor of x"""
+def smallest_factor(x):
+    """Return the smallest factor of x"""
     for i in range(2, number + 1):
         if number % i == 0:
             return number
