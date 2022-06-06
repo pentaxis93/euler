@@ -1,7 +1,7 @@
 """This module provides a variety of tricky math functions which may be
 useful for exploring Project Euler problems."""
 
-def factors_all(x):
+def factor_all(x):
     """Return a list of all the prime factors of x, including
     duplicates.
     """
@@ -20,7 +20,7 @@ def factors_all(x):
             x = reduced
     return factors
 
-def factors_unique(x):
+def factor_unique(x):
     """Return a list of all the unique prime factors of x."""
     factors = []
     reduced = x
@@ -38,6 +38,11 @@ def factors_unique(x):
     if x not in factors:
         factors.append(x)
     return factors
+
+def smallest_factor(x): """Return the smallest factor of x"""
+    for i in range(2, number + 1):
+        if number % i == 0:
+            return number
 
 def ispalindrome(input):
     """Return True if input is palindromic, and False otherwise."""

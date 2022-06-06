@@ -9,10 +9,12 @@ def multipladd(x = 3, y = 5, z = 1000):
     """Return the sum of all natural numbers below z that are multiples
     of x or y.
     """
-    return trickymath.sum_of_multiples(x, z) + trickymath.sum_of_multiples(y, z) - trickymath.sum_of_multiples(x * y, z)
+    som = trickymath.sum_of_multiples()
+    return som(x, z) + som(y, z) - som(x * y, z)
 
 # Problem 2: Even Fibonacci numbers
 def evenfibs(x = 4000000):
+    """Return the sum of all the even Fibonacci numbers below x."""
     total = 0
     a = 1
     b = 1
@@ -23,3 +25,23 @@ def evenfibs(x = 4000000):
         b = c + a
         c = a + b
     return total
+
+# Problem 3: Sum Square Difference
+def sumsquarediff(x):
+    '''Perform a single step in factoring a number.
+
+    Finds the smallest factor of the number, divides the number by the factor, and returns the reduced number for further factoring.'''
+    for i in range(2, number):
+        if number % i == 0:
+            print(i, 'is a factor.')
+            number = int(number / i)
+            return number
+    return number
+
+while True:
+    reduced = factor(target)
+    if target == reduced:
+        break
+    target = reduced
+
+print('The largest factor is', target)
