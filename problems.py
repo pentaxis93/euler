@@ -51,7 +51,7 @@ def smallmult(x = 20):
     return smallest_multiple
 
 # Problem 3: Largest Prime Factor
-def largestpfactor(x):
+def largestpfactor(x = 600851475143):
     factors = trickymath.factor_unique(x)
     factors.sort()
     return factors[-1]
