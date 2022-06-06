@@ -94,8 +94,7 @@ def specpythtrip():
     a + b + c = 1000.
     """
     for a in range(1, 999):
-        for b in range(1, 999):
-            for c in range(1, 999):
-                if (a ** 2) + (b ** 2) == c ** 2:
-                    if a + b + c == 1000:
-                        return a * b * c
+        for b in range(1, 1000 - a):
+            c = 1000 - a - b
+            if (a ** 2) + (b ** 2) == c ** 2:
+                return a * b * c
