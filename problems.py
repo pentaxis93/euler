@@ -29,6 +29,9 @@ def evenfibs(x = 4000000):
 
 # Problem 6: Sum Square Difference
 def sumsquarediff(n = 100):
+    """Return the difference between sum of squares and square of sum of the
+    first n natural numbers.
+    """
     square_of_sum = trickymath.sum_of_n(n) ** 2
     sum_of_squares = trickymath.sum_of_n2(n)
     diff = square_of_sum - sum_of_squares
@@ -36,6 +39,9 @@ def sumsquarediff(n = 100):
 
 # Problem 5: Smallest Multiple
 def smallmult(x = 20):
+    """Return the smallest positive number that is evenly divisible by all of
+    the numbers from 1 to x.
+    """
     factors = []
     for i in range(2, x + 1):
         i_factors = trickymath.factor_all(i)
@@ -52,6 +58,19 @@ def smallmult(x = 20):
 
 # Problem 3: Largest Prime Factor
 def largestpfactor(x = 600851475143):
+    """Return the largest prime factor of x."""
     factors = trickymath.factor_unique(x)
     factors.sort()
     return factors[-1]
+
+# Problem 4: Largest Palindrome Product
+largest_palindrome = 0
+
+for x in range(100, 1000):
+    for y in range(100, 1000):
+        candidate = x * y
+        if pentamath.ispalindrome(candidate):
+            if candidate > largest_palindrome:
+                largest_palindrome = candidate
+                spam = x
+                eggs = y
