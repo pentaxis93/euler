@@ -25,3 +25,6 @@ class TestProblemSolvers(unittest.TestCase):
 
     def test_specpythtrip(self):
         self.assertEqual(specpythtrip(), 31875000)
+
+    def test_seriesprod(self):
+        self.assertEqual(seriesprod(13), 23514624000)
