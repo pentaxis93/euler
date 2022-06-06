@@ -78,6 +78,7 @@ def largestpalinprod():
 
 # Problem 7: 10001st Prime
 def nthprime(n = 10001):
+    """Return the nth prime number."""
     primelist = [2]
     i = 3
     while len(primelist) < n:
@@ -86,3 +87,15 @@ def nthprime(n = 10001):
                 primelist.append(i)
         i += 1
     return primelist[-1]
+
+# Problem 9: Special Pythagorean Triplet
+def specpythtrip():
+    """Return the product abc for the single Pythagorean triplet for which
+    a + b + c = 1000.
+    """
+    for a in range(1, 999):
+        for b in range(1, 999):
+            for c in range(1, 999):
+                if (a ** 2) + (b ** 2) == c ** 2:
+                    if a + b + c == 1000:
+                        return a * b * c

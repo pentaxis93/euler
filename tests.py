@@ -22,3 +22,6 @@ class TestProblemSolvers(unittest.TestCase):
 
     def test_nthprime(self):
         self.assertEqual(nthprime(10001), 104743)
+
+    def test_specpythtrip(self):
+        self.assertEqual(specpythtrip(), 31875000)
