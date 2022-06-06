@@ -33,3 +33,19 @@ def sumsquarediff(n = 100):
     sum_of_squares = trickymath.sum_of_n2(n)
     diff = square_of_sum - sum_of_squares
     return diff
+
+# Problem 5: Smallest Multiple
+def smallmult(x = 20):
+    factors = []
+    for i in range(2, x + 1):
+        i_factors = trickymath.factor_all(i)
+        for factor in i_factors:
+            if factor not in factors:
+                factors.append(factor)
+            else:
+                while i_factors.count(factor) > factors.count(factor):
+                    factors.append(factor)
+    smallest_multiple = 1
+    for factor in factors:
+        smallest_multiple *= factor
+    return smallest_multiple
