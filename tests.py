@@ -16,3 +16,6 @@ class TestProblemSolvers(unittest.TestCase):
 
     def test_largestpfactor(self):
         self.assertEqual(largestpfactor(600851475143), 6857)
+
+    def test_largestpalinprod(self):
+        self.assertEqual(largestpalinprod(), 906609)
