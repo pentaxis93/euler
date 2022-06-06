@@ -11,7 +11,7 @@ clock_time = end_clock_time - start_clock_time
 cpu_time = end_cpu_time - start_cpu_time
 print('The solution to Problem 1 is {}.'.format(format(solution, ',')))
 print('''This calculation required {} seconds of clock time
-but only {} seconds of cpu time.
+and {} seconds of cpu time.
 '''.format(clock_time, cpu_time))
 
 # Problem 2
@@ -24,7 +24,7 @@ clock_time = end_clock_time - start_clock_time
 cpu_time = end_cpu_time - start_cpu_time
 print('The solution to Problem 2 is {}.'.format(format(solution, ',')))
 print('''This calculation required {} seconds of clock time
-but only {} seconds of cpu time.
+and {} seconds of cpu time.
 '''.format(clock_time, cpu_time))
 
 # Problem 6
@@ -37,7 +37,7 @@ clock_time = end_clock_time - start_clock_time
 cpu_time = end_cpu_time - start_cpu_time
 print('The solution to Problem 6 is {}.'.format(format(solution, ',')))
 print('''This calculation required {} seconds of clock time
-but only {} seconds of cpu time.
+and {} seconds of cpu time.
 '''.format(clock_time, cpu_time))
 
 # Problem 3
@@ -50,5 +50,5 @@ clock_time = end_clock_time - start_clock_time
 cpu_time = end_cpu_time - start_cpu_time
 print('The solution to Problem 3 is {}.'.format(format(solution, ',')))
 print('''This calculation required {} seconds of clock time
-but only {} seconds of cpu time.
+and {} seconds of cpu time.
 '''.format(clock_time, cpu_time))
